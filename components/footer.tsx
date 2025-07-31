@@ -1,44 +1,50 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Instagram, Twitter, Youtube, MessageCircle, Send } from "lucide-react"
+import { Send } from "lucide-react"
+import { BsInstagram, BsTwitterX, BsYoutube, BsTiktok, BsTelegram } from "react-icons/bs"
 import Image from "next/image"
 
 const socialLinks = [
   {
     name: "Instagram",
-    icon: Instagram,
+    icon: BsInstagram,
     href: "https://www.instagram.com/rolandocryptos/",
-    color: "hover:text-pink-400",
-    bgColor: "hover:bg-pink-400/10",
+    color: "text-pink-500/90 hover:text-pink-500",
+    bgColor: "bg-gradient-to-br from-pink-500/10 via-purple-500/10 to-orange-500/10",
+    gradient: "from-pink-500 via-purple-500 to-orange-500",
   },
   {
     name: "Twitter",
-    icon: Twitter,
+    icon: BsTwitterX,
     href: "https://x.com/RolandoCryptos",
-    color: "hover:text-blue-400",
-    bgColor: "hover:bg-blue-400/10",
+    color: "text-slate-100/90 hover:text-slate-100",
+    bgColor: "bg-slate-900/80",
+    gradient: "from-slate-700 to-slate-900",
   },
   {
     name: "YouTube",
-    icon: Youtube,
+    icon: BsYoutube,
     href: "https://www.youtube.com/@rolandocryptos",
-    color: "hover:text-red-400",
-    bgColor: "hover:bg-red-400/10",
+    color: "text-red-600/90 hover:text-red-600",
+    bgColor: "bg-red-600/10",
+    gradient: "from-red-600 to-red-700",
   },
   {
     name: "TikTok",
-    icon: MessageCircle,
+    icon: BsTiktok,
     href: "https://www.tiktok.com/@rolando.cryptos",
-    color: "hover:text-purple-400",
-    bgColor: "hover:bg-purple-400/10",
+    color: "text-slate-100/90 hover:text-slate-100",
+    bgColor: "bg-gradient-to-br from-pink-500/10 via-cyan-500/10 to-slate-100/10",
+    gradient: "from-pink-500 via-cyan-500 to-slate-100",
   },
   {
     name: "Telegram",
-    icon: Send,
+    icon: BsTelegram,
     href: "https://t.me/RolandocRyptos",
-    color: "hover:text-cyan-400",
-    bgColor: "hover:bg-cyan-400/10",
+    color: "text-sky-500/90 hover:text-sky-500",
+    bgColor: "bg-sky-500/10",
+    gradient: "from-sky-400 to-sky-600",
   },
 ]
 
@@ -102,9 +108,10 @@ export function Footer() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.1 }}
-                  className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-800/50 border border-slate-700/50 flex items-center justify-center text-slate-400 transition-all duration-300 ${social.color} ${social.bgColor} hover:border-current`}
+                  className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl ${social.bgColor} border border-slate-700/50 flex items-center justify-center transition-all duration-300 ${social.color} hover:border-current relative overflow-hidden group`}
                 >
-                  <social.icon className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${social.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+                  <social.icon className={`w-4 h-4 sm:w-5 sm:h-5 relative z-10 ${social.name === "TikTok" ? "scale-125" : ""}`} />
                 </motion.a>
               ))}
             </div>
