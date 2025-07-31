@@ -10,7 +10,15 @@ export const metadata: Metadata = {
   title: "RolandoCryptos - Tu Guía Experto en Criptomonedas",
   description:
     "Herramientas avanzadas, tutoriales especializados y mentoría personalizada en el mundo de las criptomonedas y blockchain.",
-    generator: 'v0.dev'
+  generator: "v0.dev",
+  icons: {
+    icon: [
+      { url: "/logo-rolando.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo-rolando.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/logo-rolando.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/logo-rolando.png",
+  },
 }
 
 export default function RootLayout({
