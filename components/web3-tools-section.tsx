@@ -47,7 +47,7 @@ const toolCategories = [
         title: "Photon",
         description: "Bot especializado en trading de memes y altcoins con funciones avanzadas.",
         videoUrl: "https://www.youtube.com/watch?v=1cnj1PHkmVo",
-        toolUrl: "#",
+        toolUrl: "https://photon-sol.tinyastro.io/",
         tags: ["Trading", "Memes", "Bot"],
       },
     ],
