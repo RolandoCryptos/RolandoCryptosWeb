@@ -28,7 +28,7 @@ const socialLinks = [
   },
   {
     name: "TikTok",
-    icon: MessageCircle, // Using MessageCircle as TikTok icon placeholder
+    icon: MessageCircle,
     href: "https://tiktok.com/@rolandocryptos",
     color: "hover:text-purple-400",
     bgColor: "hover:bg-purple-400/10",
@@ -57,18 +57,18 @@ export function Footer() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(222,49,99,0.1),transparent_50%)]" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
           {/* Brand Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="lg:col-span-2"
+            className="sm:col-span-2 lg:col-span-2"
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 p-2">
+            <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 p-2">
                 <Image
                   src="/logo-rolando.png"
                   alt="RolandoCryptos Logo"
@@ -78,19 +78,19 @@ export function Footer() {
                 />
               </div>
               <div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-cerise-400 to-purple-400 bg-clip-text text-transparent">
+                <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-cerise-400 to-purple-400 bg-clip-text text-transparent">
                   RolandoCryptos
                 </h3>
                 <p className="text-slate-400 text-sm">Tu guía experto en crypto</p>
               </div>
             </div>
 
-            <p className="text-slate-300 leading-relaxed mb-6 max-w-md">
+            <p className="text-slate-300 leading-relaxed mb-4 sm:mb-6 max-w-md text-sm sm:text-base">
               Más de 10 años de experiencia en el mundo de las criptomonedas y blockchain. Herramientas avanzadas,
               tutoriales especializados y mentoría personalizada para maximizar tu éxito en DeFi.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.name}
@@ -102,9 +102,9 @@ export function Footer() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.1 }}
-                  className={`w-12 h-12 rounded-xl bg-slate-800/50 border border-slate-700/50 flex items-center justify-center text-slate-400 transition-all duration-300 ${social.color} ${social.bgColor} hover:border-current`}
+                  className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-800/50 border border-slate-700/50 flex items-center justify-center text-slate-400 transition-all duration-300 ${social.color} ${social.bgColor} hover:border-current`}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 </motion.a>
               ))}
             </div>
@@ -117,13 +117,13 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg font-semibold text-white mb-6">Enlaces Rápidos</h4>
-            <ul className="space-y-3">
+            <h4 className="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-6">Enlaces Rápidos</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <button
                     onClick={() => document.querySelector(link.href)?.scrollIntoView({ behavior: "smooth" })}
-                    className="text-slate-400 hover:text-cerise-400 transition-colors duration-300 text-sm"
+                    className="text-slate-400 hover:text-cerise-400 transition-colors duration-300 text-sm sm:text-base text-left"
                   >
                     {link.name}
                   </button>
@@ -139,9 +139,9 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg font-semibold text-white mb-6">Contacto</h4>
-            <div className="space-y-4">
-              <div className="text-sm text-slate-400">
+            <h4 className="text-base sm:text-lg font-semibold text-white mb-4 sm:mb-6">Contacto</h4>
+            <div className="space-y-3 sm:space-y-4">
+              <div className="text-sm sm:text-base text-slate-400">
                 <p className="mb-2">¿Tienes dudas sobre crypto?</p>
                 <button
                   onClick={() => document.querySelector("#comunidad-vip")?.scrollIntoView({ behavior: "smooth" })}
@@ -151,11 +151,11 @@ export function Footer() {
                 </button>
               </div>
 
-              <div className="text-sm text-slate-400">
+              <div className="text-sm sm:text-base text-slate-400">
                 <p className="mb-2">Consultoría personalizada</p>
                 <a
                   href="mailto:contacto@rolandocryptos.com"
-                  className="text-purple-400 hover:text-purple-300 transition-colors"
+                  className="text-purple-400 hover:text-purple-300 transition-colors break-all"
                 >
                   contacto@rolandocryptos.com
                 </a>
@@ -170,11 +170,13 @@ export function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
-          className="mt-12 pt-8 border-t border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-4"
+          className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-4"
         >
-          <p className="text-slate-400 text-sm">© 2024 RolandoCryptos. Todos los derechos reservados.</p>
+          <p className="text-slate-400 text-sm text-center md:text-left">
+            © 2024 RolandoCryptos. Todos los derechos reservados.
+          </p>
 
-          <div className="flex items-center gap-6 text-sm text-slate-400">
+          <div className="flex items-center gap-4 sm:gap-6 text-sm text-slate-400">
             <button className="hover:text-cerise-400 transition-colors">Términos de Servicio</button>
             <button className="hover:text-cerise-400 transition-colors">Política de Privacidad</button>
           </div>

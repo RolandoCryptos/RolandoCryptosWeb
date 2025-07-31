@@ -9,21 +9,19 @@ import { VipSection } from "@/components/vip-section"
 import { Footer } from "@/components/footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <>
+    <div className="min-h-screen bg-slate-950 text-white">
       <Navbar />
-      <main className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900">
-        <HeroSection />
-        <ServicesGrid />
-        <ConsultancySection />
-        <Web3ToolsSection />
-        <TutorialsSection />
-        <PulseChainSection />
-        <VipSection />
-      </main>
+      <HeroSection />
+      <ServicesGrid />
+      <ConsultancySection />
+      <Web3ToolsSection />
+      <TutorialsSection />
+      <PulseChainSection />
+      <VipSection />
       <Footer />
       <ScrollToTop />
-    </>
+    </div>
   )
 }

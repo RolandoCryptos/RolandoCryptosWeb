@@ -71,24 +71,24 @@ const tools = [
 
 export function Web3ToolsSection() {
   return (
-    <section id="herramientas-web3" className="py-20 px-4">
+    <section id="herramientas-web3" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cerise-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-cerise-400 to-purple-400 bg-clip-text text-transparent px-4">
             Herramientas Web3
           </h2>
-          <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto px-4">
             Las mejores herramientas del ecosistema crypto para maximizar tu experiencia DeFi
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-7xl mx-auto">
           {tools.map((tool, index) => (
             <motion.div
               key={tool.title}
@@ -102,51 +102,51 @@ export function Web3ToolsSection() {
                   className={`absolute inset-0 bg-gradient-to-br ${tool.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
                 />
 
-                <CardHeader className="relative z-10">
-                  <div className="flex items-start justify-between mb-4">
+                <CardHeader className="relative z-10 p-4 sm:p-6">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 gap-4">
                     <div
-                      className={`w-14 h-14 rounded-xl bg-gradient-to-br ${tool.gradient} p-3 group-hover:scale-110 transition-transform duration-300`}
+                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br ${tool.gradient} p-3 group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}
                     >
                       <tool.icon className="w-full h-full text-white" />
                     </div>
-                    <div className="flex gap-2">
+                    <div className="flex flex-wrap gap-2 sm:flex-nowrap">
                       {tool.videoUrl && (
                         <Button
                           size="sm"
                           variant="outline"
-                          className="border-cerise-500/50 text-cerise-400 hover:bg-cerise-500/20 bg-transparent"
+                          className="border-cerise-500/50 text-cerise-400 hover:bg-cerise-500/20 bg-transparent text-xs sm:text-sm"
                           onClick={() => window.open(tool.videoUrl, "_blank")}
                         >
-                          <Play className="h-4 w-4 mr-1" />
+                          <Play className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                           Video
                         </Button>
                       )}
                       <Button
                         size="sm"
-                        className="bg-gradient-to-r from-cerise-600 to-purple-600 hover:from-cerise-700 hover:to-purple-700"
+                        className="bg-gradient-to-r from-cerise-600 to-purple-600 hover:from-cerise-700 hover:to-purple-700 text-xs sm:text-sm"
                         onClick={() => window.open(tool.toolUrl, "_blank")}
                       >
-                        <ExternalLink className="h-4 w-4 mr-1" />
+                        <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                         Usar
                       </Button>
                     </div>
                   </div>
 
-                  <CardTitle className="text-2xl font-bold text-white group-hover:text-cerise-300 transition-colors mb-2">
+                  <CardTitle className="text-xl sm:text-2xl font-bold text-white group-hover:text-cerise-300 transition-colors mb-3">
                     {tool.title}
                   </CardTitle>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {tool.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="bg-slate-700/50 text-slate-300">
+                      <Badge key={tag} variant="secondary" className="bg-slate-700/50 text-slate-300 text-xs">
                         {tag}
                       </Badge>
                     ))}
                   </div>
                 </CardHeader>
 
-                <CardContent className="relative z-10">
-                  <CardDescription className="text-slate-300 text-base leading-relaxed">
+                <CardContent className="relative z-10 p-4 sm:p-6 pt-0">
+                  <CardDescription className="text-slate-300 text-sm sm:text-base leading-relaxed">
                     {tool.description}
                   </CardDescription>
                 </CardContent>
