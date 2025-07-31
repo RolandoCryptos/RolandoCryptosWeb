@@ -12,7 +12,7 @@ const tools = [
     description:
       "Esta herramienta te permite recargar GAS en más de 50 blockchains diferentes, por ejemplo, puedes enviar $5 USD de ETH en Optimism para obtener $5 USD de ETH en Arbitrum.",
     videoUrl: "https://www.youtube.com/watch?v=E_6q_dDpnJ0",
-    toolUrl: "https://sites.google.com/view/rolandocryptos/herramientas-web3?authuser=0#h.k5z0gj6azl6r",
+    toolUrl: "https://smolrefuel.com/",
     icon: Zap,
     gradient: "from-blue-500 to-cyan-400",
     tags: ["Gas", "Multi-chain", "Swaps"],
@@ -22,7 +22,7 @@ const tools = [
     description:
       "Cross Chain Swap que te permite cambiar un token de una red por un token de OTRA red diferente, SIN necesidad de conectar tu wallet. Muy efectivo para cambios entre diferentes blockchains.",
     videoUrl: "https://www.youtube.com/watch?v=YKr5JRR0YvY",
-    toolUrl: "https://sites.google.com/view/rolandocryptos/herramientas-web3?authuser=0#h.fwnt5isz9qge",
+    toolUrl: "https://changenow.io/",
     icon: TrendingUp,
     gradient: "from-green-500 to-emerald-400",
     tags: ["Cross-chain", "No KYC", "Instant"],

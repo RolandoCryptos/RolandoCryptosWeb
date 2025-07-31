@@ -131,7 +131,7 @@ export function VipSection() {
                 <CardHeader className="p-4 sm:p-6">
                   <CardTitle className="text-xl sm:text-2xl font-bold text-white">Pago Único</CardTitle>
                   <CardDescription className="text-slate-400">Acceso completo de por vida</CardDescription>
-                  <div className="text-3xl sm:text-4xl font-bold text-yellow-400 mt-3 sm:mt-4">$497 USD</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-yellow-400 mt-3 sm:mt-4">$530 USD</div>
                 </CardHeader>
 
                 <CardContent className="p-4 sm:p-6 pt-0">
@@ -170,7 +170,7 @@ export function VipSection() {
                   <CardTitle className="text-xl sm:text-2xl font-bold text-white">Pago Mensual</CardTitle>
                   <CardDescription className="text-slate-400">Flexibilidad de pago</CardDescription>
                   <div className="text-3xl sm:text-4xl font-bold text-cerise-400 mt-3 sm:mt-4">
-                    $97 USD<span className="text-base sm:text-lg text-slate-400">/mes</span>
+                    $180 USD<span className="text-base sm:text-lg text-slate-400">/mes</span>
                   </div>
                 </CardHeader>
 
