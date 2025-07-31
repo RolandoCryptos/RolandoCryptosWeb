@@ -10,32 +10,38 @@ const tutorials = [
   {
     title: "BitcoinTry - Comprar Cripto sin KYC",
     url: "https://www.youtube.com/watch?v=WUloMyPBJ0U",
-    thumbnail: "/placeholder.svg?height=200&width=350",
+    gradient: "from-orange-500 via-yellow-500 to-orange-600",
+    icon: "₿",
   },
   {
     title: "Reservaciones de Hotel con Crypto",
     url: "https://www.youtube.com/watch?v=ZJlgTFzAxPo",
-    thumbnail: "/placeholder.svg?height=200&width=350",
+    gradient: "from-blue-500 via-indigo-500 to-purple-600",
+    icon: "🏨",
   },
   {
     title: "Órdenes Limit en Matcha.xyz",
     url: "https://www.youtube.com/watch?v=aJe0pt0ziyY",
-    thumbnail: "/placeholder.svg?height=200&width=350",
+    gradient: "from-green-500 via-emerald-500 to-teal-600",
+    icon: "📊",
   },
   {
     title: "Órdenes Limit en 1inch.io",
     url: "https://www.youtube.com/watch?v=dtWMcYZKsWQ",
-    thumbnail: "/placeholder.svg?height=200&width=350",
+    gradient: "from-cyan-500 via-blue-500 to-indigo-600",
+    icon: "📈",
   },
   {
     title: "Comprar Crypto con Tarjeta en Binance",
     url: "https://www.youtube.com/watch?v=-_VZjAZV3gI",
-    thumbnail: "/placeholder.svg?height=200&width=350",
+    gradient: "from-yellow-500 via-amber-500 to-orange-600",
+    icon: "💳",
   },
   {
     title: "Vender Bitcoin por Pesos Mexicanos",
     url: "https://www.youtube.com/watch?v=CsvKwpfdLdk",
-    thumbnail: "/placeholder.svg?height=200&width=350",
+    gradient: "from-green-500 via-emerald-500 to-lime-600",
+    icon: "💰",
   },
 ]
 
@@ -89,15 +95,23 @@ export function TutorialsSection() {
 
                     <CardContent className="p-0 relative">
                       <div className="relative overflow-hidden">
-                        <img
-                          src={tutorial.thumbnail || "/placeholder.svg"}
-                          alt={tutorial.title}
-                          className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
-                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-red-600/90 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <Play className="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1" />
+                        <div className={`w-full h-40 sm:h-48 bg-gradient-to-br ${tutorial.gradient} group-hover:scale-110 transition-transform duration-500 relative`}>
+                          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+                          
+                          {/* Decorative Elements */}
+                          <div className="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
+                          <div className="absolute -left-8 -bottom-8 w-32 h-32 bg-black/20 rounded-full blur-2xl" />
+                          
+                          {/* Icon */}
+                          <div className="absolute top-4 left-4 text-4xl sm:text-5xl opacity-90">
+                            {tutorial.icon}
+                          </div>
+
+                          {/* Play Button */}
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-white/20">
+                              <Play className="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1" />
+                            </div>
                           </div>
                         </div>
                       </div>
