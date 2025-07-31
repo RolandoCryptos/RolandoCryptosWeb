@@ -75,10 +75,10 @@ export function Navbar() {
         }`}
       >
         <nav className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-end lg:justify-between">
             {/* Logo */}
             <motion.div
-              className="flex items-center gap-2 sm:gap-3 cursor-pointer"
+              className="hidden lg:flex items-center gap-2 sm:gap-3 cursor-pointer"
               whileHover={{ scale: 1.05 }}
               onClick={() => scrollToSection("#home")}
             >
