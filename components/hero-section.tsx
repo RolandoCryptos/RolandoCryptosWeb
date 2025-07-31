@@ -77,6 +77,12 @@ export function HeroSection() {
             <Button
               size="lg"
               className="bg-gradient-to-r from-cerise-600 to-cerise-500 hover:from-cerise-700 hover:to-cerise-600 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-2xl hover:shadow-cerise-500/25 transition-all duration-300 group"
+              onClick={() => {
+                const toolsSection = document.querySelector("#herramientas-web3")
+                if (toolsSection) {
+                  toolsSection.scrollIntoView({ behavior: "smooth" })
+                }
+              }}
             >
               Explorar Herramientas
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -86,6 +92,12 @@ export function HeroSection() {
               variant="outline"
               size="lg"
               className="border-2 border-purple-400/50 text-purple-300 hover:bg-purple-400/10 px-8 py-6 text-lg font-semibold rounded-xl backdrop-blur-sm bg-transparent"
+              onClick={() => {
+                const tutorialsSection = document.querySelector("#tutoriales")
+                if (tutorialsSection) {
+                  tutorialsSection.scrollIntoView({ behavior: "smooth" })
+                }
+              }}
             >
               <Play className="mr-2 h-5 w-5" />
               Ver Tutoriales
