@@ -160,21 +160,21 @@ export function Web3ToolsSection() {
           </p>
         </motion.div>
 
-                <div className="max-w-5xl mx-auto">
-          <Tabs defaultValue={toolCategories[0].title} className="w-full">
-            <TabsList className="h-auto flex flex-wrap justify-center gap-2 bg-slate-900/50 p-2 mb-6">
+                <div className="w-full sm:max-w-5xl mx-auto">
+          <Tabs defaultValue={toolCategories[0].title} className="w-full bg-slate-950/50 sm:bg-transparent rounded-xl">
+            <TabsList className="h-auto flex flex-col lg:flex-row items-stretch lg:items-center justify-start lg:justify-center gap-2 bg-slate-900/50 p-2 mb-6">
               {toolCategories.map((category, categoryIndex) => (
                 <TabsTrigger
                   key={category.title}
                   value={category.title}
-                  className="flex items-center gap-2 data-[state=active]:bg-slate-800 data-[state=active]:text-cerise-300"
+                  className="w-full lg:w-[180px] xl:w-auto flex items-center gap-3 data-[state=active]:bg-slate-800 data-[state=active]:text-cerise-300 px-4 py-3 lg:px-3 lg:py-2"
                 >
                   <div
-                    className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category.gradient} p-1.5 flex-shrink-0`}
+                    className={`w-12 h-12 lg:w-8 lg:h-8 rounded-xl bg-gradient-to-br ${category.gradient} p-2.5 lg:p-1.5 flex-shrink-0`}
                   >
                     <category.icon className="w-full h-full text-white" />
                   </div>
-                  <span>{category.title}</span>
+                  <span className="flex-1 text-base lg:text-sm whitespace-nowrap">{category.title}</span>
                 </TabsTrigger>
               ))}
             </TabsList>
@@ -193,13 +193,13 @@ export function Web3ToolsSection() {
                 >
                   <Card className="bg-slate-900/50 border-slate-700/50 overflow-hidden">
                     <CardHeader className="p-6">
-                      <div className="flex items-center gap-4 mb-6">
+                      <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 mb-6">
                         <div
                           className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${category.gradient} p-3 flex-shrink-0`}
                         >
                           <category.icon className="w-full h-full text-white" />
                         </div>
-                        <div>
+                        <div className="flex-1 text-center sm:text-left">
                           <CardTitle className="text-2xl font-bold text-white mb-2">
                             {category.title}
                           </CardTitle>
@@ -212,10 +212,10 @@ export function Web3ToolsSection() {
                       <div className="grid gap-6">
                         {category.tools && category.tools.map((tool, toolIndex) => (
                           <div key={tool.title} className="border-t border-slate-700/50 pt-6">
-                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
-                              <div>
+                            <div className="flex flex-col sm:flex-row gap-4 items-start">
+                              <div className="w-full sm:w-auto text-center sm:text-left">
                                 <h3 className="text-lg font-semibold text-white mb-2">{tool.title}</h3>
-                                <div className="flex flex-wrap gap-2 mb-3">
+                                <div className="flex flex-wrap justify-center sm:justify-start gap-2 mb-3">
                                   {tool.tags.map((tag) => (
                                     <Badge
                                       key={tag}
@@ -227,7 +227,12 @@ export function Web3ToolsSection() {
                                   ))}
                                 </div>
                               </div>
-                              <div className="flex flex-wrap gap-2">
+                              <div className="flex-1 text-center sm:text-left">
+                                <CardDescription className="text-slate-300 text-sm leading-relaxed">
+                                  {tool.description}
+                                </CardDescription>
+                              </div>
+                              <div className="flex flex-wrap justify-center sm:justify-end gap-2 w-full sm:w-auto">
                                 {tool.videoUrl && (
                                   <Button
                                     size="sm"
@@ -249,9 +254,6 @@ export function Web3ToolsSection() {
                                 </Button>
                               </div>
                             </div>
-                            <CardDescription className="text-slate-300 text-sm leading-relaxed">
-                              {tool.description}
-                            </CardDescription>
                           </div>
                         ))}
                       </div>
