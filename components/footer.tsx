@@ -188,6 +188,27 @@ export function Footer() {
             <button className="hover:text-cerise-400 transition-colors">Política de Privacidad</button>
           </div>
         </motion.div>
+
+        {/* Kirovich Credit */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-4 pt-4 border-t border-slate-800/30 text-center"
+        >
+          <p className="text-slate-400 text-sm">
+            Creado por:{" "}
+            <a
+              href="https://kirovich.cl/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cerise-400 hover:text-cerise-300 transition-all duration-300 font-semibold hover:underline hover:scale-105 inline-block"
+            >
+              Kirovich
+            </a>
+          </p>
+        </motion.div>
       </div>
 
       {/* Decorative Elements */}
