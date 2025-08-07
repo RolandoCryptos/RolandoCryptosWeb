@@ -23,6 +23,7 @@ import {
   Coins,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const benefits = [
   {
@@ -54,6 +55,34 @@ const benefits = [
     icon: TrendingUp,
     title: "Actualización Diaria",
     description: "Información actualizada de los cripto mercados",
+  },
+];
+
+const freeCommunities = [
+  {
+    title: "PulseChain Español",
+    href: "https://t.me/PulseChainEspanol",
+    image: "/PulseChainEspañol.png",
+  },
+  {
+    title: "Cultiva Cripto",
+    href: "https://t.me/CultivaCripto",
+    image: "/cultivacripto.png",
+  },
+  {
+    title: "PulseX Español",
+    href: "https://t.me/PulseXSpanish",
+    image: "/PulseXEspañol.png",
+  },
+  {
+    title: "TON Español",
+    href: "http://t.me/TONenEspanol",
+    image: "/tonespañol.png",
+  },
+  {
+    title: "DegensOnChain",
+    href: "https://t.me/IntelOnChain",
+    image: "/placeholder-logo.png",
   },
 ];
 
@@ -321,6 +350,58 @@ export function VipSection() {
               </Card>
             </motion.div>
           </div>
+
+        {/* Free Communities */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="mt-10 sm:mt-14"
+        >
+          <Card className="bg-slate-900/40 border-slate-700/40 backdrop-blur-sm">
+            <CardHeader className="p-4 sm:p-6 text-center">
+              <CardTitle className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cerise-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Comunidades Gratuitas.
+              </CardTitle>
+              <CardDescription className="text-slate-400">
+                Puedes unirte a mis comunidades gratis en Telegram.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="p-4 sm:p-6 pt-0">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                {freeCommunities.map((c) => (
+                  <a
+                    key={c.title}
+                    href={c.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group rounded-xl overflow-hidden border border-slate-700/40 bg-slate-800/40 hover:border-cerise-500/40 transition-all"
+                  >
+                    <div className="relative w-full h-40 sm:h-44 bg-slate-900">
+                      <Image
+                        src={c.image}
+                        alt={c.title}
+                        fill
+                        className="object-contain p-5 transition-transform duration-300 group-hover:scale-105"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                    <div className="p-4 flex items-center justify-between">
+                      <div>
+                        <h4 className="text-white font-semibold text-sm sm:text-base">{c.title}</h4>
+                        <p className="text-cerise-300 text-xs sm:text-sm mt-0.5">Unirse en Telegram</p>
+                      </div>
+                      <Button size="sm" className="bg-cerise-600/80 hover:bg-cerise-600">
+                        Unirse
+                      </Button>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
 
           {/* Value Proposition */}
           <motion.div
