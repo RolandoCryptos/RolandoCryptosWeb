@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Send } from "lucide-react"
 import { BsInstagram, BsTwitterX, BsYoutube, BsTiktok, BsTelegram } from "react-icons/bs"
 import Image from "next/image"
+import { getCurrentYear } from "@/lib/utils"
 
 const socialLinks = [
   {
@@ -160,12 +161,20 @@ export function Footer() {
 
               <div className="text-sm sm:text-base text-slate-400">
                 <p className="mb-2">Consultoría personalizada</p>
-                <a
-                  href="mailto:contacto@rolandocryptos.com"
-                  className="text-purple-400 hover:text-purple-300 transition-colors break-all"
-                >
-                  contacto@rolandocryptos.com
-                </a>
+                <div className="flex flex-col">
+                  <a
+                    href="mailto:contacto@rrrdigital.com"
+                    className="text-purple-400 hover:text-purple-300 transition-colors break-all"
+                  >
+                    contacto@rrrdigital.com
+                  </a>
+                  <a
+                    href="mailto:rolando@rrrdigital.com"
+                    className="text-purple-400 hover:text-purple-300 transition-colors break-all"
+                  >
+                    rolando@rrrdigital.com
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -180,7 +189,7 @@ export function Footer() {
           className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-slate-400 text-sm text-center md:text-left">
-            © 2024 RolandoCryptos. Todos los derechos reservados.
+            © {getCurrentYear()} RolandoCryptos. Todos los derechos reservados.
           </p>
 
           <div className="flex items-center gap-4 sm:gap-6 text-sm text-slate-400">

@@ -69,12 +69,7 @@ export function PulseChainSection() {
                 <Button
                   size="lg"
                   className="w-full sm:w-auto bg-gradient-to-r from-cerise-600 to-purple-600 hover:from-cerise-700 hover:to-purple-700 text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-xl shadow-2xl hover:shadow-cerise-500/25 transition-all duration-300"
-                  onClick={() =>
-                    window.open(
-                      "https://metamask.github.io/phishing-warning/v5.0.0/#hostname=pulsemex.com&href=https%3A%2F%2Fpulsemex.com%2F",
-                      "_blank",
-                    )
-                  }
+                  onClick={() => window.open("https://pulsechain.com/", "_blank")}
                 >
                   <ExternalLink className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Explorar PulseChain

@@ -218,7 +218,7 @@ export function VipSection() {
                   <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                     <li className="flex items-center gap-3 text-slate-300 text-sm sm:text-base">
                       <Check className="h-4 w-4 sm:h-5 sm:w-5 text-green-400 flex-shrink-0" />
-                      Acceso de por vida
+                      Acceso exclusivo por 6 meses.
                     </li>
                     <li className="flex items-center gap-3 text-slate-300 text-sm sm:text-base">
                       <Check className="h-4 w-4 sm:h-5 sm:w-5 text-green-400 flex-shrink-0" />
