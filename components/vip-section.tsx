@@ -236,7 +236,7 @@ export function VipSection() {
                     Pago Único
                   </CardTitle>
                   <CardDescription className="text-slate-400">
-                    Acceso completo de por vida
+                    Acceso completo
                   </CardDescription>
                   <div className="text-3xl sm:text-4xl font-bold text-yellow-400 mt-3 sm:mt-4">
                     $530 USD
