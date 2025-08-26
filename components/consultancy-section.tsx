@@ -59,14 +59,27 @@ export function ConsultancySection() {
               </div>
 
               <div className="text-center">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-gradient-to-r from-cerise-600 to-purple-600 hover:from-cerise-700 hover:to-purple-700 text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-xl shadow-2xl hover:shadow-cerise-500/25 transition-all duration-300"
-                  onClick={() => document.querySelector("#comunidad-vip")?.scrollIntoView({ behavior: "smooth" })}
-                >
-                  <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  Agendar Consultoría
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <Button
+                    size="lg"
+                    className="w-full sm:w-auto bg-gradient-to-r from-cerise-600 to-purple-600 hover:from-cerise-700 hover:to-purple-700 text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-xl shadow-2xl hover:shadow-cerise-500/25 transition-all duration-300"
+                    onClick={() => window.open("https://book.stripe.com/5kA3cc7p28364Te28n", "_blank")}
+                  >
+                    <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                    Agendar Consultoría
+                  </Button>
+                  
+                  <Button
+                    size="lg"
+                    className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
+                    onClick={() => window.open("https://skipshift.io/?r=rolandocryptos", "_blank")}
+                  >
+                    <svg className="mr-2 h-4 w-4 sm:h-5 sm:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                    Comprar Cripto Sin KYC
+                  </Button>
+                </div>
               </div>
             </CardContent>
           </Card>

@@ -111,10 +111,7 @@ export function VipSection() {
           </h2>
 
           <p className="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto px-4 mb-8">
-            Infórmate y aprende sobre el mercado cripto accediendo a mi
-            comunidad VIP (180 días), donde compartimos experiencias,
-            información especializada y alertas on-chain para maximizar tus
-            oportunidades en el ecosistema crypto.
+            Informate y aprende sobre el mercado cripto accediendo a mi canal VIP donde comparto información, experiencias y datos que solo conseguirás conmigo, además de las alertas OnChain para maximizar tus oportunidadades en el ecosistema cripto y las mentororías 1:1 con Rolando.
           </p>
 
           <div className="max-w-2xl mx-auto">
